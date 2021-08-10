@@ -1,1 +1,200 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary: #ff9800;
+$accent: #03a9f4;
+$secondary: #22272e;
+$font: #fefefe;
+$side-menu-bg: #1b1b1b;
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+:root {
+  --clr-primary: #{$primary};
+  --clr-primary-light: #{lighten($primary, 10%)};
+  --clr-secondary: #{$secondary};
+  --clr-accent: #{$accent};
+  --clr-accent-light: #{lighten($accent, 10%)};
+  --clr-font: #{set-text-color($secondary)};
+  --clr-side-menu-bg: #{$side-menu-bg};
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--clr-secondary);
+  color: var(--clr-font);
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  scroll-snap-align: start;
+
+  display: block;
+  height: calc(100vh - 68px);
+  position: relative;
+  padding: 4rem;
+
+  .section__header {
+    margin-top: 8vh;
+  }
+
+  h1 {
+    font-size: 6rem;
+    letter-spacing: -5.5px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 3rem;
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    padding: 2rem;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-font);
+}
+
+.bg-secondary {
+  background: var(--clr-secondary);
+}
+
+.bg-primary {
+  background: var(--clr-primary);
+}
+
+.btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-rounded {
+  border-radius: 10px;
+}
+
+.big-btn {
+  display: flex;
+  cursor: pointer;
+
+  a:hover {
+    color: var(--clr-font);
+    background-color: var(--clr-primary);
+
+    .las {
+      color: var(--clr-font);
+      transform: rotate(90deg);
+    }
+  }
+
+  a {
+    padding: 0.75rem 1.5rem;
+    font-size: 21px;
+    border: 2px solid var(--clr-primary);
+    color: var(--clr-primary);
+
+    .las {
+      margin-left: 1rem;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.text-secondary {
+  color: var(--clr-secondary);
+}
+
+.typewriter {
+  display: inline-flex;
+}
+
+.typewriter h2 {
+  overflow: hidden;
+  border-right: 0.15em solid var(--clr-primary);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.replay {
+  animation-name: none !important;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--clr-primary);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--clr-primary);
+  padding: 0 1rem;
+
+  &:hover {
+    background: var(--clr-primary-light);
+  }
+}

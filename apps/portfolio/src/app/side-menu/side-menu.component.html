@@ -1,0 +1,18 @@
+<div class="side-menu-overlay" [class.visible]="visible$ | async"></div>
+<div class="side-menu-wrapper" [class.visible]="visible$ | async">
+  <div class="side-menu__nav">
+    <ul>
+      <li *ngFor="let menuItem of menuItems">
+        <a class="btn" (click)="scrollToPage(menuItem.name)" routerLinkActive="active">{{ menuItem.label }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-menu__footer">
+    <div class="side-menu__footer__socials">
+      <a href="https://github.com/rewodev" target="_blank">
+        <span class="lab la-github"></span>
+      </a>
+    </div>
+    <div class="side-menu__footer__copyright">&copy; René Wolf 2021. All rights reserved.</div>
+  </div>
+</div>

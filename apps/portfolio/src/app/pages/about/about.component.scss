@@ -1,0 +1,101 @@
+:host {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  .about__me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .about__skills {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .abstracts {
+    color: var(--clr-secondary);
+  }
+
+  .abstract {
+    text-align: center;
+    margin-top: 1rem;
+    transition: all 0.2s ease-in-out;
+    line-height: 1.5;
+  }
+
+  .me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 250px;
+
+    img {
+      border-radius: 50%;
+      max-width: 100%;
+      box-shadow: 0 0 4px 0 var(--clr-secondary);
+    }
+  }
+
+  .skill-bar {
+    display: flex;
+    min-height: 1.8em;
+    background: var(--clr-font);
+    font-size: 1em;
+
+    .skill-bar__fill {
+      background: var(--clr-accent);
+      display: flex;
+      align-items: stretch;
+    }
+
+    .skill-bar__tag {
+      background: var(--clr-accent-light);
+      color: var(--clr-font);
+      width: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+
+    .about__me {
+      flex-direction: row;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+
+    .about__me {
+      .me {
+        max-width: 150px;
+      }
+    }
+
+    .about__skills .skill-bar {
+      font-size: 0.7rem;
+
+      .skill-bar__tag {
+        width: 90px;
+      }
+    }
+  }
+}

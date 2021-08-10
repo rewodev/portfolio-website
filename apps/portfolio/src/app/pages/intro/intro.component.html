@@ -1,0 +1,16 @@
+<h1>
+  <span [innerHTML]="'intro.hi' | translate"></span>
+</h1>
+<div class="typewriter">
+  <h2 [reWoDevTypewriter]="texts" (typewriterEnded)="showBtn = true"></h2>
+</div>
+<div class="btn big-btn" [style.opacity]="showBtn ? '1' : '0'">
+  <a class="btn btn-rounded">Say Hello</a>
+</div>
+
+<div class="btn big-btn go-to">
+  <a class="btn btn-rounded" (click)="scrollToPage()">
+    <span>View more</span>
+    <span class="las la-arrow-right"></span>
+  </a>
+</div>
