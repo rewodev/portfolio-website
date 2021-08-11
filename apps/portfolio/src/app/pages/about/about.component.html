@@ -1,21 +1,23 @@
-<h1 class="section__header">About <span class="text-secondary">Me</span></h1>
+<h1 class="section__header" [innerHTML]="'about.title' | translate"></h1>
 <div class="about">
   <div class="about__me">
     <div class="me">
       <img src="./assets/img/me.jpg" alt="René Wolf" aria-label="René Wolf" />
     </div>
     <div class="abstracts">
-      <div class="abstract">
-        I'm a Full Stack Developer located in Gera, Thuringia, Germany. I have 10+ years experience in software development.
-      </div>
-      <div class="abstract">In my spare time I'm passionate about playing table tennis and spending time with my two lovely kids.</div>
+      <div class="abstract">{{ 'about.text-1' | translate }}</div>
+      <div class="abstract">{{ 'about.text-2' | translate }}</div>
     </div>
   </div>
   <div class="about__skills">
-    <div class="skill-bar" *ngFor="let skill of skills">
-      <div class="skill-bar__fill" [style.width]="skill.value">
-        <div class="skill-bar__tag">{{ skill.name }}</div>
+    <ng-container *ngFor="let skill of skills">
+      <div class="skill-label">
+        <span>{{ skill.name }}</span>
+        <span>{{ skill.value }}</span>
       </div>
-    </div>
+      <div class="skill-bar">
+        <div class="skill-bar__fill" [style.width]="skill.value"></div>
+      </div>
+    </ng-container>
   </div>
 </div>

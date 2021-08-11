@@ -5,12 +5,12 @@
   <h2 [reWoDevTypewriter]="texts" (typewriterEnded)="showBtn = true"></h2>
 </div>
 <div class="btn big-btn" [style.opacity]="showBtn ? '1' : '0'">
-  <a class="btn btn-rounded">Say Hello</a>
+  <a class="btn btn-rounded">{{ 'intro.say-hello' | translate }}</a>
 </div>
 
 <div class="btn big-btn go-to">
   <a class="btn btn-rounded" (click)="scrollToPage()">
-    <span>View more</span>
+    <span>{{ 'intro.view-more' | translate }}</span>
     <span class="las la-arrow-right"></span>
   </a>
 </div>

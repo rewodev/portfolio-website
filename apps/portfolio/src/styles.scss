@@ -19,6 +19,7 @@ $side-menu-bg: #1b1b1b;
   --clr-primary: #{$primary};
   --clr-primary-light: #{lighten($primary, 10%)};
   --clr-secondary: #{$secondary};
+  --clr-secondary-light: #{lighten($secondary, 10%)};
   --clr-accent: #{$accent};
   --clr-accent-light: #{lighten($accent, 10%)};
   --clr-font: #{set-text-color($secondary)};
@@ -49,7 +50,7 @@ body {
   padding: 4rem;
 
   .section__header {
-    margin-top: 8vh;
+    margin-top: 6vh;
   }
 
   h1 {
@@ -100,6 +101,7 @@ a {
 }
 
 .btn {
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 

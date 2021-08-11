@@ -1,7 +1,20 @@
 {
+  "menu.home": "Home",
+  "menu.about": "About",
+  "menu.services": "Services",
+  "menu.contact": "Contact",
+
   "intro.hi": "<span class='text-primary'>Hi,</span> I'm <span class='text-primary'>René</span>",
   "intro.texts.web-developer": "Web Developer",
   "intro.texts.programmer": "Programmer",
   "intro.texts.freelancer": "Freelancer",
-  "intro.texts.contact-me": "Contact me!"
+  "intro.texts.contact-me": "Contact me!",
+  "intro.say-hello": "Say Hello",
+  "intro.view-more": "More about me",
+
+  "about.title": "About <span class='text-secondary'>Me</span>",
+  "about.text-1": "I'm a Full Stack Developer located in Gera, Thuringia, Germany. I have 10+ years experience in software development.",
+  "about.text-2": "In my spare time I'm passionate about playing table tennis and spending time with my two lovely kids.",
+
+  "services.title": "<span class='text-primary'>My</span> services"
 }

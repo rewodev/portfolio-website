@@ -13,19 +13,6 @@
     gap: 2rem;
   }
 
-  .about__skills {
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    font-size: 1rem;
-    margin-bottom: 4rem;
-  }
-
-  .abstracts {
-    color: var(--clr-secondary);
-  }
-
   .abstract {
     text-align: center;
     margin-top: 1rem;
@@ -47,11 +34,25 @@
     }
   }
 
+  .about__skills {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .skill-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
   .skill-bar {
     display: flex;
-    min-height: 1.8em;
-    background: var(--clr-font);
+    min-height: 1.3em;
+    background: var(--clr-primary-light);
     font-size: 1em;
+    margin-bottom: 0.5rem;
 
     .skill-bar__fill {
       background: var(--clr-accent);

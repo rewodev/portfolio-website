@@ -14,10 +14,10 @@ export interface MenuItem {
 })
 export class SideMenuComponent {
   menuItems: MenuItem[] = [
-    { label: 'Home', name: 're-wo-dev-intro', link: '/' },
-    { label: 'About', name: 're-wo-dev-about', link: '/about' },
-    { label: 'Services', name: 're-wo-dev-services', link: '/services' },
-    { label: 'Contact', name: 're-wo-dev-contact', link: '/contact' }
+    { label: 'menu.home', name: 're-wo-dev-intro', link: '/' },
+    { label: 'menu.about', name: 're-wo-dev-about', link: '/about' },
+    { label: 'menu.services', name: 're-wo-dev-services', link: '/services' },
+    { label: 'menu.contact', name: 're-wo-dev-contact', link: '/contact' }
   ];
 
   visible$ = this.sideMenuService.visible$;

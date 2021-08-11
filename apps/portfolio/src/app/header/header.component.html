@@ -4,6 +4,10 @@
     <a [routerLink]="['/contact']" class="btn">hello@re-wo-dev.com</a>
     <span class="las la-copy btn" (click)="copy()"></span>
   </div>
+  <div class="navbar__lang">
+    <a *ngIf="currentLang === 'en'" class="btn" (click)="setLanguage('de')">de</a>
+    <a *ngIf="currentLang === 'de'" class="btn" (click)="setLanguage('en')">en</a>
+  </div>
   <div class="navbar__burger" (click)="toggleMenu()" [class.close]="sideMenuService.visible$ | async">
     <div aria-hidden="true"></div>
     <div aria-hidden="true"></div>

@@ -31,17 +31,25 @@
 
     a,
     .las {
-      cursor: pointer;
       padding: 0.5rem;
 
       &:hover {
-        background: rgba(0, 0, 0, 0.3); //var(--clr-primary);
+        background: rgba(0, 0, 0, 0.3);
         border-radius: 5px;
       }
     }
 
     .las {
       font-size: 1.3rem;
+    }
+  }
+
+  .navbar__lang a {
+    padding: 0.5rem;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
     }
   }
 
