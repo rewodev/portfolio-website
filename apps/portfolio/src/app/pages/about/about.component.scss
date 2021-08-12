@@ -18,6 +18,14 @@
     margin-top: 1rem;
     transition: all 0.2s ease-in-out;
     line-height: 1.5;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 500ms ease-in;
+
+    &.appear {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .me {
@@ -39,6 +47,17 @@
     flex-direction: column;
     font-size: 1rem;
     margin-bottom: 4rem;
+  }
+
+  .skill {
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 500ms ease-in;
+
+    &.appear {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .skill-label {
@@ -71,6 +90,9 @@
   }
 
   @media screen and (max-width: 1024px) {
+    height: unset;
+    max-height: unset;
+
     .about {
       grid-template-columns: 1fr;
     }
@@ -81,6 +103,7 @@
   }
 
   @media screen and (max-width: 760px) {
+    height: unset;
     max-height: unset;
 
     .about {

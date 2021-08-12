@@ -5,12 +5,16 @@
       <img src="./assets/img/me.jpg" alt="René Wolf" aria-label="René Wolf" />
     </div>
     <div class="abstracts">
-      <div class="abstract">{{ 'about.text-1' | translate }}</div>
-      <div class="abstract">{{ 'about.text-2' | translate }}</div>
+      <div class="abstract" reWoDevIntersectionObserver intersectionClass="appear" [intersectionThreshold]="1">
+        {{ 'about.text-1' | translate }}
+      </div>
+      <div class="abstract" reWoDevIntersectionObserver intersectionClass="appear" [intersectionThreshold]="1">
+        {{ 'about.text-2' | translate }}
+      </div>
     </div>
   </div>
   <div class="about__skills">
-    <ng-container *ngFor="let skill of skills">
+    <div *ngFor="let skill of skills" class="skill" reWoDevIntersectionObserver intersectionClass="appear" [intersectionThreshold]="0.5">
       <div class="skill-label">
         <span>{{ skill.name }}</span>
         <span>{{ skill.value }}</span>
@@ -18,6 +22,6 @@
       <div class="skill-bar">
         <div class="skill-bar__fill" [style.width]="skill.value"></div>
       </div>
-    </ng-container>
+    </div>
   </div>
 </div>
