@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SideMenuService } from './side-menu.service';
 import { MenuItem } from '@re-wo-dev/model';
+import { Router } from '@angular/router';
 
 /**
  * Component for displaying the side menu page/section.
@@ -15,9 +16,9 @@ export class SideMenuComponent {
    * The list of menu items.
    */
   menuItems: MenuItem[] = [
-    { label: 'menu.home', componentName: 're-wo-dev-intro', link: '/' },
-    { label: 'menu.about', componentName: 're-wo-dev-about', link: '/about' },
-    { label: 'menu.services', componentName: 're-wo-dev-services', link: '/services' }
+    { label: 'menu.home', section: 'intro' },
+    { label: 'menu.about', section: 'about' },
+    { label: 'menu.services', section: 'services' }
     // { label: 'menu.contact', componentName: 're-wo-dev-contact', link: '/contact' }
   ];
 
@@ -26,14 +27,15 @@ export class SideMenuComponent {
    */
   visible$ = this.sideMenuService.visible$;
 
-  constructor(private sideMenuService: SideMenuService) {}
+  constructor(private sideMenuService: SideMenuService, private router: Router) {}
 
   /**
    * Scrolls to the given section of the page.
-   * @param componentName The component name.
+   * @param name The section name.
    */
-  scrollToPage(componentName: string) {
-    (<HTMLElement>document.getElementsByTagName(componentName)[0]).scrollIntoView({ behavior: 'smooth' });
+  scrollToPage(name?: string) {
     this.sideMenuService.hide();
+    const queryParams = name ? { queryParams: { section: name } } : undefined;
+    this.router.navigate(['/'], queryParams);
   }
 }

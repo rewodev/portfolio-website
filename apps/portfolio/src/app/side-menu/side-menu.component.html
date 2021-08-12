@@ -4,7 +4,7 @@
   <div class="side-menu__nav">
     <ul>
       <li *ngFor="let menuItem of menuItems">
-        <a class="btn" (click)="scrollToPage(menuItem.componentName)" routerLinkActive="active">{{ menuItem.label | translate }}</a>
+        <a class="btn" (click)="scrollToPage(menuItem.section)" routerLinkActive="active">{{ menuItem.label | translate }}</a>
       </li>
     </ul>
   </div>

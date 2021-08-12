@@ -8,12 +8,7 @@ export interface MenuItem {
   label: string;
 
   /**
-   * The component name.
+   * The page/section name.
    */
-  componentName: string;
-
-  /**
-   * The page/section link.
-   */
-  link: string;
+  section?: string;
 }
