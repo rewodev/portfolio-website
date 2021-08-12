@@ -14,6 +14,13 @@
     }
   }
 
+  .side-menu__lang {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+  }
+
   .side-menu-wrapper {
     position: fixed;
     z-index: 101;
@@ -104,5 +111,11 @@
   .side-menu-wrapper.visible .side-menu__footer__copyright {
     transform: translateY(0);
     opacity: 1;
+  }
+
+  @media screen and (max-width: 560px) {
+    .side-menu__lang {
+      display: flex;
+    }
   }
 }

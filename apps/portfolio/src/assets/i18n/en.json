@@ -43,5 +43,7 @@
   "contact.fields.message": "Message",
   "contact.error.required": "The field is required.",
   "contact.error.email": "No valid email.",
-  "contact.send": "Contact me"
+  "contact.send": "Contact me",
+
+  "copyright": "René Wolf 2021. All rights reserved."
 }

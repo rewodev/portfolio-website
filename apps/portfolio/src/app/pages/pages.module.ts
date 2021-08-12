@@ -12,6 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IntersectionObserverModule, TypewriterModule } from '@re-wo-dev/ui';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FooterModule } from '../footer/footer.module';
 
 @NgModule({
   declarations: [HomeComponent, AboutComponent, ServicesComponent, IntroComponent, ContactComponent],
@@ -21,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     PagesRoutingModule,
     HeaderModule,
+    FooterModule,
     TypewriterModule,
     SideMenuModule,
     TranslateModule,

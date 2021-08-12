@@ -49,21 +49,6 @@
     align-items: center;
   }
 
-  .navbar__lang {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-
-    padding: 0.25rem 0.5rem;
-    margin-right: 2rem;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 5px;
-    }
-  }
-
   .navbar__burger {
     z-index: 300;
     cursor: pointer;
@@ -112,17 +97,11 @@
     .navbar__lang {
       margin-right: 1rem;
     }
-
-    .navbar__lang span {
-      display: none;
-    }
   }
 
   @media screen and (max-width: 560px) {
-    .navbar__logo {
-      display: none;
-    }
-
+    .navbar__logo,
+    .navbar__lang,
     .navbar__contact .las {
       display: none;
     }

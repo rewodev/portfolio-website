@@ -15,7 +15,7 @@
   "about.text-2": "In meiner Freizeit spiele ich Tischtennis und verbringe am liebsten Zeit mit meinen beiden Kindern.",
 
   "services.title": "Ich <span class='text-primary'>biete</span>",
-  "services.individual-skills": "Individuelle Fähighkeiten",
+  "services.individual-skills": "Individuelle Fähigkeiten",
   "services.individual-skills.text-1": "mehr als 10 Jahre Erfahrung in allen Bereichen der Software-Entwicklung",
   "services.individual-skills.text-2": "kurze Einarbeitungszeiten in bestehende Quellcodes",
   "services.individual-skills.text-3": "gute Erreichbarkeit und kurze Reaktionszeiten",
@@ -43,5 +43,7 @@
   "contact.fields.message": "Nachricht",
   "contact.error.required": "Pflichtfeld",
   "contact.error.email": "Keine gültige E-Mail-Adresse",
-  "contact.send": "Absenden"
+  "contact.send": "Absenden",
+
+  "copyright": "René Wolf 2021. Alle Rechte vorbehalten."
 }

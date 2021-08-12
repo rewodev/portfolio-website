@@ -1,5 +1,6 @@
 <div class="side-menu-overlay" [class.visible]="visible$ | async"></div>
 <div class="side-menu-wrapper" [class.visible]="visible$ | async">
+  <re-wo-dev-language-select class="side-menu__lang"></re-wo-dev-language-select>
   <div class="side-menu__nav">
     <ul>
       <li *ngFor="let menuItem of menuItems">
@@ -13,6 +14,6 @@
         <span class="lab la-github"></span>
       </a>
     </div>
-    <div class="side-menu__footer__copyright">&copy; René Wolf 2021. All rights reserved.</div>
+    <div class="side-menu__footer__copyright">&copy; {{ 'copyright' | translate }}</div>
   </div>
 </div>

@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  margin-right: 2rem;
+
+  span {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: var(--clr-secondary-light);
+
+    &.active {
+      background: var(--clr-primary);
+    }
+
+    &:hover {
+      background: var(--clr-primary-light);
+    }
+  }
+}

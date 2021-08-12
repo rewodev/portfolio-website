@@ -1,22 +1,12 @@
 :host {
-  z-index: 1;
-
   &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0.1;
-    background: url('../../../assets/img/about-bg.jpg');
-    background-size: cover;
-    z-index: -1;
+    background-image: url('../../../assets/img/about-bg.jpg');
   }
 
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
     gap: 3rem;
     margin-top: 4rem;
   }
@@ -29,7 +19,7 @@
   }
 
   .abstracts {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .abstract {
@@ -37,9 +27,9 @@
     margin-top: 1rem;
     transition: all 0.2s ease-in-out;
     line-height: 1.5;
-    transform: translateY(100px);
+    transform: translateY(50%);
     opacity: 0;
-    transition: all 500ms ease-in;
+    transition: transform 500ms ease-in, opacity 500ms ease-in;
 
     &.appear {
       transform: translateY(0);
@@ -52,11 +42,11 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    max-width: 250px;
+    max-width: 200px;
 
     img {
       border-radius: 50%;
-      max-width: 100%;
+      max-width: 200px;
       box-shadow: 0 0 4px 0 var(--clr-secondary);
     }
   }
@@ -65,15 +55,14 @@
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    margin-bottom: 4rem;
     padding: 2rem;
     width: auto;
   }
 
   .skill {
-    transform: translateY(200px);
+    transform: translateY(100%);
     opacity: 0;
-    transition: all 500ms ease-in;
+    transition: transform 500ms ease-in, opacity 500ms ease-in;
 
     &.appear {
       transform: translateY(0);
@@ -122,6 +111,10 @@
 
     .about__me {
       flex-direction: row;
+    }
+
+    .abstracts {
+      font-size: 1rem;
     }
   }
 
