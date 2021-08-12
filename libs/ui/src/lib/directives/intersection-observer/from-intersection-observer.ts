@@ -2,6 +2,12 @@ import { Observable, Subject } from 'rxjs';
 import { IntersectionStatus } from './intersection-status.enum';
 import { debounceTime, filter } from 'rxjs/operators';
 
+/**
+ * Helper function for emitting events on intersection of elements with the current viewport.
+ * @param element The HTML element.
+ * @param config The intersection observer configuration.
+ * @param debounce The optional debounce time.
+ */
 export const fromIntersectionObserver = (element: HTMLElement, config: IntersectionObserverInit, debounce = 0) =>
   new Observable<IntersectionStatus>((subscriber) => {
     const subject$ = new Subject<{

@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@re-wo-dev/model": ["libs/model/src/index.ts"],
       "@re-wo-dev/ui": ["libs/ui/src/index.ts"]
     }
   },

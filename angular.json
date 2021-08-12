@@ -1,6 +1,28 @@
 {
   "version": 1,
   "projects": {
+    "model": {
+      "projectType": "library",
+      "root": "libs/model",
+      "sourceRoot": "libs/model/src",
+      "prefix": "re-wo-dev",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/model"],
+          "options": {
+            "jestConfig": "libs/model/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/model/src/**/*.ts", "libs/model/src/**/*.html"]
+          }
+        }
+      }
+    },
     "portfolio": {
       "projectType": "application",
       "root": "apps/portfolio",

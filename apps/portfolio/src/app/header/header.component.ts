@@ -13,10 +13,16 @@ export class HeaderComponent {
 
   constructor(public sideMenuService: SideMenuService) {}
 
+  /**
+   * Toggles the side menu.
+   */
   toggleMenu() {
     this.sideMenuService.toggle();
   }
 
+  /**
+   * Copies the mail address to the clipboard.
+   */
   copy() {
     navigator.clipboard.writeText('hello@re-wo-dev.com');
 

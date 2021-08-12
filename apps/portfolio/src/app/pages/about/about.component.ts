@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
+import { Skill } from '@re-wo-dev/model';
 
-export interface Skill {
-  name: string;
-  value: string;
-}
-
+/**
+ * Component for displaying the about me page/section.
+ */
 @Component({
   selector: 're-wo-dev-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+  /**
+   * The list of skills.
+   */
   skills: Skill[] = [
-    { name: 'HTML / CSS', value: '90%' },
+    { name: 'HTML / CSS / SASS', value: '90%' },
     { name: 'JavaScript / TypeScript', value: '90%' },
     { name: 'C#', value: '75%' },
     { name: 'Angular', value: '95%' },

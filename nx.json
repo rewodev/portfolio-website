@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "model": {
+      "tags": []
+    },
     "portfolio": {
       "tags": []
     },

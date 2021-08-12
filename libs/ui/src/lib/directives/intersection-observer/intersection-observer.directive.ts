@@ -4,6 +4,9 @@ import { takeUntil } from 'rxjs/operators';
 import { fromIntersectionObserver } from './from-intersection-observer';
 import { IntersectionStatus } from './intersection-status.enum';
 
+/**
+ * Directive for using intersection observers.
+ */
 @Directive({
   selector: '[reWoDevIntersectionObserver]'
 })
