@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent {
-  texts = ['intro.texts.web-developer', 'intro.texts.programmer', 'intro.texts.freelancer', 'intro.texts.contact-me'];
+  texts = ['intro.texts.web-developer', 'intro.texts.programmer', 'intro.texts.freelancer'];
 
   showBtn = false;
 

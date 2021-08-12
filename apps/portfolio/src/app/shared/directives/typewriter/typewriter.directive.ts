@@ -11,6 +11,12 @@ export class TypewriterDirective {
   @Input() reWoDevTypewriter!: string[];
   @Output() typewriterEnded = new EventEmitter<boolean>();
 
+  @HostBinding('class.replay') replay = false;
+
+  @HostBinding('innerHTML') get text() {
+    return this.translate.instant(this.reWoDevTypewriter[this.textIdx]);
+  }
+
   @HostListener('animationend')
   onAnimationEnd() {
     if (this.textIdx == this.reWoDevTypewriter.length - 1) {
@@ -23,13 +29,7 @@ export class TypewriterDirective {
         this.textIdx++;
         this.replay = false;
       }, 100);
-    }, 2500);
-  }
-
-  @HostBinding('class.replay') replay = false;
-
-  @HostBinding('innerHTML') get text() {
-    return this.translate.instant(this.reWoDevTypewriter[this.textIdx]);
+    }, 1900);
   }
 
   constructor(private translate: TranslateService) {}

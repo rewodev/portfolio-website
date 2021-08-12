@@ -70,7 +70,19 @@
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+
+    .about__me {
+      flex-direction: row;
+    }
+  }
+
   @media screen and (max-width: 760px) {
+    max-height: unset;
+
     .about {
       grid-template-columns: 1fr;
     }
@@ -81,11 +93,16 @@
   }
 
   @media screen and (max-width: 560px) {
-    display: flex;
-    flex-direction: column;
-    height: unset;
+    max-height: unset;
+
+    .about {
+      display: flex;
+      flex-direction: column;
+    }
 
     .about__me {
+      flex-direction: column;
+
       .me {
         max-width: 150px;
       }

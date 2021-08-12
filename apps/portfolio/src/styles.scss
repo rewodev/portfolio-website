@@ -35,6 +35,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  min-width: 360px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -63,6 +67,7 @@ body {
   }
 
   @media screen and (max-width: 767px) {
+    max-height: 800px;
     padding: 3rem;
 
     h1 {
@@ -112,17 +117,9 @@ a {
 .big-btn {
   display: flex;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
-  a:hover {
-    color: var(--clr-font);
-    background-color: var(--clr-primary);
-
-    .las {
-      color: var(--clr-font);
-      transform: rotate(90deg);
-    }
-  }
-
+  div,
   a {
     padding: 0.75rem 1.5rem;
     font-size: 21px;
@@ -132,6 +129,16 @@ a {
     .las {
       margin-left: 1rem;
       transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+      color: var(--clr-font);
+      background-color: var(--clr-primary);
+
+      .las {
+        color: var(--clr-font);
+        transform: rotate(90deg);
+      }
     }
   }
 }

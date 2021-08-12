@@ -8,13 +8,11 @@
   "intro.texts.web-developer": "Webentwickler",
   "intro.texts.programmer": "Programmierer",
   "intro.texts.freelancer": "Freelancer",
-  "intro.texts.contact-me": "Schreib mir!",
-  "intro.say-hello": "Sag Hallo",
   "intro.view-more": "Mehr über mich",
 
   "about.title": "Über <span class='text-secondary'>mich</span>",
   "about.text-1": "Ich bin ein Full Stack Entwickler aus Gera, Thüringen und habe mehr als 10 Jahre Erfahrung in der Software-Entwicklung.",
   "about.text-2": "In meiner Freizeit spiele ich leidenschaftlich gern Tischtennis und verbringe am liebsten Zeit mit meinen beiden Kindern.",
 
-  "services.title": "<span class='text-primary'>Leistungen</span>"
+  "services.title": "Ich <span class='text-primary'>biete</span>"
 }

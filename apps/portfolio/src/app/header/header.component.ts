@@ -24,7 +24,8 @@ export class HeaderComponent implements OnInit {
     navigator.clipboard.writeText('hello@re-wo-dev.com');
   }
 
-  setLanguage(lang: string) {
+  changeLanguage() {
+    const lang = this.translate.getDefaultLang() === 'en' ? 'de' : 'en';
     this.translate.setDefaultLang(lang);
     this.currentLang = lang;
   }

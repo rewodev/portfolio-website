@@ -44,8 +44,19 @@
     }
   }
 
-  .navbar__lang a {
-    padding: 0.5rem;
+  .navbar__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__lang {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    padding: 0.25rem 0.5rem;
+    margin-right: 2rem;
 
     &:hover {
       background: rgba(0, 0, 0, 0.3);
@@ -64,6 +75,10 @@
       margin: 0 0 5px 0;
       background: #fff;
       transition: all 0.5s ease-out;
+
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 
@@ -92,6 +107,14 @@
   @media screen and (max-width: 767px) {
     .container {
       padding: 0 0.5rem;
+    }
+
+    .navbar__lang {
+      margin-right: 1rem;
+    }
+
+    .navbar__lang span {
+      display: none;
     }
   }
 
