@@ -1,12 +1,11 @@
 <div class="container">
   <div class="navbar__logo"></div>
   <div class="navbar__contact">
-    <a [routerLink]="['/contact']" class="btn">hello@re-wo-dev.com</a>
+    <a href="mailto:hello@re-wo-dev.com" class="btn">hello@re-wo-dev.com</a>
     <span class="las la-copy btn" (click)="copy()"></span>
   </div>
   <div class="navbar__actions">
     <div class="navbar__lang" (click)="changeLanguage()">
-      <span>Change to</span>
       <img *ngIf="currentLang === 'en'" src="assets/img/de.png" alt="de" />
       <img *ngIf="currentLang === 'de'" src="assets/img/en.png" alt="en" />
     </div>

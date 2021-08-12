@@ -14,6 +14,7 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
   @Input() intersectionThreshold!: number | number[];
   @Input() intersectionClass!: string;
   @Input() intersectionApplyClassOnce = true;
+  @Input() intersectionStyle!: any;
 
   @Output() visibilityChange = new EventEmitter<IntersectionStatus>();
 
@@ -40,6 +41,9 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
           } else if (!this.intersectionApplyClassOnce && status == IntersectionStatus.NotVisible) {
             this.element.nativeElement.classList.remove(this.intersectionClass);
           }
+        }
+        if (this.intersectionStyle) {
+          Object.keys(this.intersectionStyle).forEach((style) => (this.element.nativeElement.style[style] = this.intersectionStyle[style]));
         }
       });
   }

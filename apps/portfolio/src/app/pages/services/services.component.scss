@@ -13,4 +13,27 @@
     background-size: cover;
     z-index: -1;
   }
+
+  .cards {
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    width: 400px;
+
+    &.appear {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: unset;
+    max-height: unset;
+  }
 }

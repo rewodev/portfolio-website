@@ -28,6 +28,10 @@
     gap: 2rem;
   }
 
+  .abstracts {
+    font-size: 1.5rem;
+  }
+
   .abstract {
     text-align: center;
     margin-top: 1rem;
@@ -62,6 +66,8 @@
     flex-direction: column;
     font-size: 1rem;
     margin-bottom: 4rem;
+    padding: 2rem;
+    width: auto;
   }
 
   .skill {
@@ -92,6 +98,8 @@
       background: var(--clr-accent);
       display: flex;
       align-items: stretch;
+      width: 0;
+      transition: width 0.5s ease-in 0.5s;
     }
 
     .skill-bar__tag {
@@ -127,6 +135,10 @@
 
     .about__me {
       flex-direction: row;
+    }
+
+    .abstracts {
+      font-size: 1rem;
     }
   }
 

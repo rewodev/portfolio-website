@@ -1,1 +1,50 @@
 <h1 class="section__header" [innerHTML]="'services.title' | translate"></h1>
+
+<div class="cards">
+  <div class="card" reWoDevIntersectionObserver intersectionClass="appear" [intersectionThreshold]="0.5">
+    <div class="card__header">{{ 'services.individual-skills' | translate }}</div>
+    <div class="card__body">
+      <ul>
+        <li>{{ 'services.individual-skills.text-1' | translate }}</li>
+        <li>{{ 'services.individual-skills.text-2' | translate }}</li>
+        <li>{{ 'services.individual-skills.text-3' | translate }}</li>
+        <li>{{ 'services.individual-skills.text-4' | translate }}</li>
+        <li>{{ 'services.individual-skills.text-5' | translate }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" reWoDevIntersectionObserver intersectionClass="appear" [intersectionThreshold]="0.5">
+    <div class="card__header">{{ 'services.front-end' | translate }}</div>
+    <div class="card__body">
+      <ul>
+        <li>{{ 'services.front-end.text-1' | translate }}</li>
+        <li>{{ 'services.front-end.text-2' | translate }}</li>
+        <li>{{ 'services.front-end.text-3' | translate }}</li>
+        <li>{{ 'services.front-end.text-4' | translate }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" reWoDevIntersectionObserver intersectionClass="appear" [intersectionThreshold]="0.5">
+    <div class="card__header">{{ 'services.back-end' | translate }}</div>
+    <div class="card__body">
+      <ul>
+        <li>{{ 'services.back-end.text-1' | translate }}</li>
+        <li>{{ 'services.back-end.text-2' | translate }}</li>
+        <li>{{ 'services.back-end.text-3' | translate }}</li>
+        <li>{{ 'services.back-end.text-4' | translate }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" reWoDevIntersectionObserver intersectionClass="appear" [intersectionThreshold]="0.5">
+    <div class="card__header">{{ 'services.code' | translate }}</div>
+    <div class="card__body">
+      <ul>
+        <li>{{ 'services.code.text-1' | translate }}</li>
+        <li>{{ 'services.code.text-2' | translate }}</li>
+        <li>{{ 'services.code.text-3' | translate }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<h1 class="section__header" [innerHTML]="'contact.title' | translate"></h1>
+
+<div class="form">
+  <div class="card">
+    <form class="card__body" [formGroup]="form" (ngSubmit)="submit()">
+      <div class="sender">
+        <div class="form-control-wrapper">
+          <input type="text" name="name" id="name" formControlName="name" [placeholder]="'contact.fields.name' | translate" />
+          <span role="alert" class="alert" *ngIf="name.touched && name.invalid">{{ 'contact.error.required' | translate }}</span>
+        </div>
+        <div class="form-control-wrapper">
+          <input type="email" name="email" id="email" formControlName="email" [placeholder]="'contact.fields.email' | translate" />
+          <span role="alert" class="alert" *ngIf="email.touched && email.invalid">{{ 'contact.error.email' | translate }}</span>
+        </div>
+      </div>
+      <div class="form-control-wrapper">
+        <input type="text" name="subject" id="subject" formControlName="subject" [placeholder]="'contact.fields.subject' | translate" />
+      </div>
+      <div class="form-control-wrapper">
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          formControlName="message"
+          [placeholder]="'contact.fields.message' | translate"
+        ></textarea>
+        <span role="alert" class="alert" *ngIf="message.touched && message.invalid">{{ 'contact.error.required' | translate }}</span>
+      </div>
+      <div class="btn big-btn">
+        <button type="submit" class="btn btn-rounded">
+          {{ 'contact.send' | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

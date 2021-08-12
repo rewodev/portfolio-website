@@ -13,14 +13,14 @@
       </div>
     </div>
   </div>
-  <div class="about__skills">
+  <div class="about__skills card">
     <div *ngFor="let skill of skills" class="skill" reWoDevIntersectionObserver intersectionClass="appear" [intersectionThreshold]="0.5">
       <div class="skill-label">
         <span>{{ skill.name }}</span>
         <span>{{ skill.value }}</span>
       </div>
       <div class="skill-bar">
-        <div class="skill-bar__fill" [style.width]="skill.value"></div>
+        <div class="skill-bar__fill" reWoDevIntersectionObserver [intersectionStyle]="{ width: skill.value }"></div>
       </div>
     </div>
   </div>
