@@ -25,7 +25,6 @@
   .abstract {
     text-align: center;
     margin-top: 1rem;
-    transition: all 0.2s ease-in-out;
     line-height: 1.5;
     transform: translateY(50%);
     opacity: 0;
@@ -52,53 +51,9 @@
   }
 
   .about__skills {
-    display: flex;
-    flex-direction: column;
     font-size: 1rem;
     padding: 2rem;
-    width: auto;
-  }
-
-  .skill {
-    transform: translateY(100%);
-    opacity: 0;
-    transition: transform 500ms ease-in, opacity 500ms ease-in;
-
-    &.appear {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  .skill-label {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4px;
-  }
-
-  .skill-bar {
-    display: flex;
-    min-height: 1.3em;
-    background: var(--clr-primary-light);
-    font-size: 1em;
-    margin-bottom: 0.5rem;
-
-    .skill-bar__fill {
-      background: var(--clr-accent);
-      display: flex;
-      align-items: stretch;
-      width: 0;
-      transition: width 0.5s ease-in 0.5s;
-    }
-
-    .skill-bar__tag {
-      background: var(--clr-accent-light);
-      color: var(--clr-font);
-      width: 110px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    width: 100%;
   }
 
   @media screen and (max-width: 1024px) {
@@ -148,14 +103,6 @@
 
       .me {
         max-width: 150px;
-      }
-    }
-
-    .about__skills .skill-bar {
-      font-size: 0.7rem;
-
-      .skill-bar__tag {
-        width: 90px;
       }
     }
   }

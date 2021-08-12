@@ -9,7 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { IntroComponent } from './intro/intro.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { IntersectionObserverModule, TypewriterModule } from '@re-wo-dev/ui';
+import { IntersectionObserverModule, TypewriterModule, SkillsModule } from '@re-wo-dev/ui';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterModule } from '../footer/footer.module';
@@ -18,7 +18,6 @@ import { FooterModule } from '../footer/footer.module';
   declarations: [HomeComponent, AboutComponent, ServicesComponent, IntroComponent, ContactComponent],
   imports: [
     CommonModule,
-
     ReactiveFormsModule,
     PagesRoutingModule,
     HeaderModule,
@@ -26,7 +25,8 @@ import { FooterModule } from '../footer/footer.module';
     TypewriterModule,
     SideMenuModule,
     TranslateModule,
-    IntersectionObserverModule
+    IntersectionObserverModule,
+    SkillsModule
   ]
 })
 export class PagesModule {}

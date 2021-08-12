@@ -1,0 +1,9 @@
+<div *ngFor="let skill of skills" class="skill" reWoDevIntersectionObserver intersectionClass="appear" [intersectionThreshold]="0">
+  <div class="skill__label">
+    <span>{{ skill.name }}</span>
+    <span>{{ skill.value }}</span>
+  </div>
+  <div class="skill__bar">
+    <div class="skill__bar__fill" reWoDevIntersectionObserver [intersectionStyle]="{ width: skill.value }"></div>
+  </div>
+</div>

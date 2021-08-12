@@ -17,8 +17,8 @@ export class SideMenuComponent {
   menuItems: MenuItem[] = [
     { label: 'menu.home', componentName: 're-wo-dev-intro', link: '/' },
     { label: 'menu.about', componentName: 're-wo-dev-about', link: '/about' },
-    { label: 'menu.services', componentName: 're-wo-dev-services', link: '/services' },
-    { label: 'menu.contact', componentName: 're-wo-dev-contact', link: '/contact' }
+    { label: 'menu.services', componentName: 're-wo-dev-services', link: '/services' }
+    // { label: 'menu.contact', componentName: 're-wo-dev-contact', link: '/contact' }
   ];
 
   /**

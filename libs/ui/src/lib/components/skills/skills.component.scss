@@ -1,0 +1,40 @@
+:host {
+  .skill {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 500ms ease-in, opacity 500ms ease-in;
+
+    &.appear {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .skill__label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .skill__bar {
+    display: flex;
+    min-height: 1.3em;
+    background: var(--clr-primary-light);
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill__bar__fill {
+    background: var(--clr-accent);
+    display: flex;
+    align-items: stretch;
+    width: 0;
+    transition: width 0.5s ease-in 0.5s;
+  }
+
+  @media screen and (max-width: 560px) {
+    .skill__label {
+      font-size: 0.8rem;
+    }
+  }
+}
