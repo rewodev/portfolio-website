@@ -1,4 +1,21 @@
 :host {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.1;
+    background: url('../../../assets/img/intro-bg.jpg');
+    background-size: cover;
+    z-index: -1;
+  }
+
   h1 {
     margin-top: 20vh;
   }
@@ -13,19 +30,15 @@
     margin-top: 2rem;
   }
 
-  .go-to {
-    position: absolute;
-    left: 4rem;
-    bottom: 4rem;
+  .more {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
   }
 
   @media screen and (max-width: 767px) {
     h1 {
       margin-top: 10vh;
-    }
-
-    .go-to {
-      left: 3rem;
     }
   }
 
@@ -37,10 +50,6 @@
 
     h2 {
       font-size: 1.8rem;
-    }
-
-    .go-to {
-      left: 2rem;
     }
   }
 }
