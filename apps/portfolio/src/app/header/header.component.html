@@ -1,8 +1,11 @@
 <div class="container">
   <div class="navbar__logo"></div>
   <div class="navbar__contact">
-    <a href="mailto:hello@re-wo-dev.com" class="btn">hello@re-wo-dev.com</a>
-    <span class="las la-copy btn" (click)="copy()"></span>
+    <a href="mailto:hello@re-wo-dev.com" class="btn">
+      hello@re-wo-dev.com
+      <div class="copy" [class]="copyPending"></div>
+    </a>
+    <span class="las la-copy btn" (click)="copy()" title="{{ 'header.copy' | translate }}"></span>
   </div>
   <div class="navbar__actions">
     <re-wo-dev-language-select class="navbar__lang"></re-wo-dev-language-select>

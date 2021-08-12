@@ -19,6 +19,9 @@
   }
 
   .socials {
+    display: flex;
+    gap: 1rem;
+
     .lab {
       font-size: 2rem;
     }

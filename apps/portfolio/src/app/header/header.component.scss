@@ -29,6 +29,33 @@
     display: flex;
     align-items: center;
 
+    a {
+      position: relative;
+    }
+
+    .copy {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: var(--clr-primary);
+      border-radius: 5px;
+      visibility: hidden;
+      width: 0;
+      opacity: 0.3;
+      transition: width 500ms ease-out;
+
+      &.appear {
+        width: 100%;
+        visibility: visible;
+      }
+
+      &.ready {
+        transition: none;
+        width: 0;
+      }
+    }
+
     a,
     .las {
       padding: 0.5rem;

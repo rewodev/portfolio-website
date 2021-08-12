@@ -4,6 +4,8 @@
   "menu.services": "Services",
   "menu.contact": "Contact",
 
+  "header.copy": "Copy to clipboard",
+
   "intro.hi": "<span class='text-primary'>Hi,</span> I'm <span class='text-primary'>René</span>",
   "intro.texts.web-developer": "Web Developer",
   "intro.texts.programmer": "Programmer",
