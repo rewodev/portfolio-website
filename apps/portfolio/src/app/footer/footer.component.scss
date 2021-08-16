@@ -5,10 +5,14 @@
   left: 0;
   bottom: 0;
   padding: 0.5rem 1rem;
+  min-height: 50px;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // justify-content: space-between;
+  justify-items: center;
   align-items: center;
+  gap: 1rem;
 
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -16,15 +20,18 @@
 
   .copyright {
     font-size: 0.8rem;
+    justify-self: start;
   }
 
   .imprint {
     cursor: pointer;
+    font-size: 0.8rem;
   }
 
   .socials {
     display: flex;
     gap: 1rem;
+    justify-self: end;
 
     .lab {
       font-size: 2rem;

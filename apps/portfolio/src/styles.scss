@@ -6,6 +6,12 @@ $secondary: #22272e;
 $font: #fefefe;
 $side-menu-bg: #1b1b1b;
 
+$primary-light: #ffe0b2;
+$accent-light: #03a9f4;
+$secondary-light: #fefefe;
+$font-light: #1b1b1b;
+$side-menu-bg-light: #dbdbdb;
+
 // Set Text Color
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
@@ -17,6 +23,7 @@ $side-menu-bg: #1b1b1b;
 
 :root {
   --clr-primary: #{$primary};
+  --clr-primary-dark: #{$primary};
   --clr-primary-light: #{lighten($primary, 10%)};
   --clr-secondary: #{$secondary};
   --clr-secondary-light: #{lighten($secondary, 10%)};
@@ -24,6 +31,18 @@ $side-menu-bg: #1b1b1b;
   --clr-accent-light: #{lighten($accent, 10%)};
   --clr-font: #{set-text-color($secondary)};
   --clr-side-menu-bg: #{$side-menu-bg};
+}
+
+body.light {
+  --clr-primary: #{$primary-light};
+  --clr-primary-dark: #{$primary};
+  --clr-primary-light: #{lighten($primary-light, 10%)};
+  --clr-secondary: #{$secondary-light};
+  --clr-secondary-light: #{lighten($secondary-light, 10%)};
+  --clr-accent: #{$accent-light};
+  --clr-accent-light: #{lighten($accent-light, 10%)};
+  --clr-font: #{set-text-color($secondary-light)};
+  --clr-side-menu-bg: #{$side-menu-bg-light};
 }
 
 html,
@@ -64,7 +83,7 @@ body {
   }
 
   .section__header {
-    margin-top: 2rem;
+    margin: 2rem 0 4rem;
   }
 
   h1 {
@@ -86,6 +105,10 @@ body {
     h2 {
       font-size: 2.5rem !important;
     }
+
+    .section__header {
+      margin: 1.5rem 0 3rem;
+    }
   }
 
   @media screen and (max-width: 560px) {
@@ -104,13 +127,17 @@ body {
     height: unset !important;
 
     h1 {
-      font-size: 3rem;
+      font-size: 3rem !important;
       margin-top: 0;
       letter-spacing: -3px;
     }
 
     h2 {
       font-size: 1.8rem;
+    }
+
+    .section__header {
+      margin: 1rem 0 2rem;
     }
   }
 }
@@ -147,8 +174,8 @@ a {
   button {
     padding: 0.75rem 1.5rem;
     font-size: 21px;
-    border: 2px solid var(--clr-primary);
-    color: var(--clr-primary);
+    border: 2px solid var(--clr-primary-dark);
+    color: var(--clr-primary-dark);
 
     .las {
       margin-left: 1rem;
@@ -157,7 +184,7 @@ a {
 
     &:hover {
       color: var(--clr-font);
-      background-color: var(--clr-primary);
+      background-color: var(--clr-primary-dark);
 
       .las {
         color: var(--clr-font);
@@ -183,7 +210,7 @@ a {
 }
 
 .text-primary {
-  color: var(--clr-primary);
+  color: var(--clr-primary-dark);
 }
 
 .text-secondary {
@@ -211,7 +238,7 @@ a {
     font-size: 1.2rem;
 
     &__header {
-      color: var(--clr-primary);
+      color: var(--clr-primary-dark);
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
 
@@ -230,7 +257,7 @@ a {
     }
   }
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 767px) {
     &__header {
       font-size: 1.25rem;
     }
@@ -243,6 +270,34 @@ a {
       }
     }
   }
+
+  @media screen and (max-width: 560px) {
+    &__header {
+      font-size: 1rem;
+    }
+
+    &__body {
+      font-size: 0.8rem;
+
+      &__header {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+
+        &:not(:first-child) {
+          margin-top: 0.6rem;
+        }
+      }
+
+      ul {
+        padding-left: 1rem;
+
+        li {
+          line-height: 1.3;
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+  }
 }
 
 .typewriter {
@@ -251,7 +306,7 @@ a {
 
 .typewriter h2 {
   overflow: hidden;
-  border-right: 0.15em solid var(--clr-primary);
+  border-right: 0.15em solid var(--clr-primary-dark);
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.1em;
@@ -279,7 +334,7 @@ a {
     border-color: transparent;
   }
   50% {
-    border-color: var(--clr-primary);
+    border-color: var(--clr-primary-dark);
   }
 }
 

@@ -52,7 +52,7 @@
 
   .side-menu-wrapper .side-menu__nav {
     margin-top: 10rem;
-    margin-left: 5rem;
+    margin-left: 3rem;
     opacity: 0;
     transform: translateY(100%);
     transition: all 0.5s ease-out;
@@ -81,7 +81,7 @@
 
   .side-menu__footer {
     position: absolute;
-    left: 5rem;
+    left: 3rem;
     bottom: 6rem;
 
     &__socials,

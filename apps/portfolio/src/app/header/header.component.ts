@@ -11,6 +11,10 @@ export class HeaderComponent {
   currentLang!: string;
   copyPending = '';
 
+  get darkMode() {
+    return !document.querySelector('body')?.classList.contains('light');
+  }
+
   constructor(public sideMenuService: SideMenuService) {}
 
   /**
@@ -28,5 +32,9 @@ export class HeaderComponent {
 
     this.copyPending = 'appear';
     timer(1000).subscribe(() => (this.copyPending = 'ready'));
+  }
+
+  toggleMode() {
+    document.querySelector('body')?.classList.toggle('light');
   }
 }
