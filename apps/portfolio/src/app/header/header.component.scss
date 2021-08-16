@@ -2,7 +2,7 @@
   display: block;
   padding: 1rem 2rem;
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -28,8 +28,20 @@
   .navbar__contact {
     display: flex;
     align-items: center;
+    transition: all 0.5s ease-in-out;
 
-    a {
+    // .icon {
+    //   display: none;
+    //   visibility: hidden;
+    //   background: var(--clr-primary);
+    //   font-size: 2rem;
+    //   border-radius: 50%;
+    //   cursor: pointer;
+    //   padding: 0.75rem;
+    //   transition: all 0.5s ease-in-out;
+    // }
+
+    a.btn {
       position: relative;
     }
 
@@ -56,8 +68,9 @@
       }
     }
 
-    a,
-    .las {
+    a.btn,
+    .btn.las {
+      transition: all 0.5s ease-in-out;
       padding: 0.5rem;
 
       &:hover {
@@ -66,7 +79,7 @@
       }
     }
 
-    .las {
+    .btn.las {
       font-size: 1.3rem;
     }
   }
@@ -113,6 +126,21 @@
   @media screen and (min-width: 1024px) {
     .navbar__logo {
       padding: 0.5rem 0;
+    }
+
+    .navbar__contact.floating {
+      position: fixed;
+      z-index: 30;
+      bottom: 70px;
+      right: 20px;
+
+      .btn {
+        visibility: hidden;
+      }
+
+      .icon {
+        visibility: visible;
+      }
     }
   }
 

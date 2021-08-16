@@ -18,8 +18,9 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
   @Input() intersectionClass!: string;
   @Input() intersectionApplyClassOnce = true;
   @Input() intersectionStyle!: any;
+  @Input() intersectionElement!: string;
 
-  @Output() visibilityChange = new EventEmitter<IntersectionStatus>();
+  @Output() visibilityChange = new EventEmitter<{ status: IntersectionStatus; element: HTMLElement }>();
 
   private destroy$ = new Subject();
 
@@ -36,17 +37,19 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
     fromIntersectionObserver(element, config, this.intersectionDebounce)
       .pipe(takeUntil(this.destroy$))
       .subscribe((status) => {
-        this.visibilityChange.emit(status);
+        this.visibilityChange.emit({ status, element: this.intersectionElement || this.element.nativeElement });
+
+        const el = this.intersectionElement ? document.querySelector(this.intersectionElement) : this.element.nativeElement;
 
         if (this.intersectionClass) {
           if (status == IntersectionStatus.Visible) {
-            this.element.nativeElement.classList.add(this.intersectionClass);
+            el.classList.add(this.intersectionClass);
           } else if (!this.intersectionApplyClassOnce && status == IntersectionStatus.NotVisible) {
-            this.element.nativeElement.classList.remove(this.intersectionClass);
+            el.classList.remove(this.intersectionClass);
           }
         }
         if (this.intersectionStyle) {
-          Object.keys(this.intersectionStyle).forEach((style) => (this.element.nativeElement.style[style] = this.intersectionStyle[style]));
+          Object.keys(this.intersectionStyle).forEach((style) => (el.style[style] = this.intersectionStyle[style]));
         }
       });
   }
