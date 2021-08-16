@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 /**
@@ -10,12 +11,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements AfterViewInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngAfterViewInit() {
     this.route.queryParams.subscribe(({ section }) => {
       if (section) {
-        (<HTMLElement>document.querySelector(`re-wo-dev-${section}`)).scrollIntoView({ behavior: 'smooth' });
+        const el = <HTMLElement>document.querySelector(`re-wo-dev-${section}`);
+        window.scrollTo({ top: el.offsetTop - 68, behavior: 'smooth' });
+        this.router.navigate([], { queryParams: { section: null } });
       }
     });
   }

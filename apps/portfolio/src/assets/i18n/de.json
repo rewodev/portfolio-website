@@ -3,6 +3,7 @@
   "menu.about": "Über mich",
   "menu.services": "Leistungen",
   "menu.contact": "Kontakt",
+  "menu.imprint": "Impressum",
 
   "header.copy": "Kopieren",
 
@@ -48,6 +49,5 @@
   "contact.error.email": "Keine gültige E-Mail-Adresse",
   "contact.send": "Absenden",
 
-  "copyright": "René Wolf 2021. Alle Rechte vorbehalten.",
-  "imprint": "Impressum"
+  "copyright": "René Wolf 2021. Alle Rechte vorbehalten."
 }

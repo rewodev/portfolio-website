@@ -168,9 +168,12 @@
   }
 
   @media screen and (max-width: 560px) {
-    .navbar__contact,
+    .navbar__contact {
+      font-size: 1rem;
+    }
+
     .navbar__mode {
-      font-size: 0.8rem;
+      font-size: 1.5rem;
     }
 
     .navbar__logo,

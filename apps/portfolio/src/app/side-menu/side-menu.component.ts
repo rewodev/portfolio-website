@@ -18,8 +18,9 @@ export class SideMenuComponent {
   menuItems: MenuItem[] = [
     { label: 'menu.home', section: 'intro' },
     { label: 'menu.about', section: 'about' },
-    { label: 'menu.services', section: 'services' }
-    // { label: 'menu.contact', componentName: 're-wo-dev-contact', link: '/contact' }
+    { label: 'menu.services', section: 'services' },
+    { label: 'menu.imprint', section: '/imprint' }
+    // { label: 'menu.contact', section: 'contact }
   ];
 
   /**
@@ -31,11 +32,15 @@ export class SideMenuComponent {
 
   /**
    * Scrolls to the given section of the page.
-   * @param name The section name.
+   * @param section The section name.
    */
-  scrollToPage(name?: string) {
+  goTo(section: string) {
     this.sideMenuService.hide();
-    const queryParams = name ? { queryParams: { section: name } } : undefined;
-    this.router.navigate(['/'], queryParams);
+    if (section.startsWith('/')) {
+      this.router.navigate([section]);
+    } else {
+      const queryParams = section ? { queryParams: { section: section } } : undefined;
+      this.router.navigate(['/'], queryParams);
+    }
   }
 }

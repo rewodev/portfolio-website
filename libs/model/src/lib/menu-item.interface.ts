@@ -10,5 +10,5 @@ export interface MenuItem {
   /**
    * The page/section name.
    */
-  section?: string;
+  section: string;
 }
